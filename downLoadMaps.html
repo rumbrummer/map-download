@@ -1,0 +1,53 @@
+<!-- Download kurviger maps - 1st step  -->
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DownLoad</title>
+		<script src="downLoadMaps.js"></script>
+		<script src="cookie.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="https://kurviger.de/img/favicon/favicon-32x32.png">
+		<link rel="stylesheet" href="downLoadMaps.css"/>
+	</head>
+	<body onload="bodyLoaded();">
+		<h1> DownLoad kurviger maps</h1>
+		from <a href="https://offline-maps.kurviger.de" target="_blank" rel="noopener">https://offline-maps.kurviger.de</a>
+		<button onclick="downLoad()">Run...</button>
+		<button id="cookieLink" onclick="window.open('/mate/ShowCookies/ShowCookies.html?filter=^downLoadMaps');">cookies &#x1f36a;</button>
+		
+		<!-- <table class="align"> -->
+			<!-- <tbody> -->
+				<!-- <tr> -->
+					<!-- <td> -->
+						<!-- <table class="tab"> -->
+							<!-- <thead> -->
+								<!-- <tr> -->
+									<!-- <th>Root folder</th> -->
+									<!-- <th>Show ?</th> -->
+								<!-- </tr> -->
+							<!-- </thead>			 -->
+							<!-- <tbody id="tabRootFolders"> -->
+							<!-- </tbody> -->
+						<!-- </table> -->
+						<!-- </td> -->
+					<!-- <td> -->
+						<table class="tab">
+							<thead>
+								<tr>
+									<th>Map</th>
+									<th>update(server)</th>
+									<th>Size</th>
+									<th>update(local)</th>
+									<th>Now ?</th>
+								</tr>
+							</thead>			
+							<tbody id="tabMaps">
+							</tbody>
+						</table>
+					<!-- </td> -->
+				<!-- </tr> -->
+			<!-- </tbody> -->
+		<!-- </table> -->
+	</body>
+</html>

@@ -1,0 +1,23 @@
+/* Download kurviger maps - 1st step */
+
+button { min-height: 30px; min-width: 30px; margin: 15px; cursor: pointer;}
+
+h1 { background-color: lightyellow; margin-bottom: 0px;}
+
+input[type=checkbox] {
+	/* Double-sized Checkboxes */
+	-ms-transform: scale(1.5); /* IE */
+	-moz-transform: scale(1.5); /* FF */
+	-webkit-transform: scale(1.5) translate(0,-5%); /* Safari and Chrome */
+	-o-transform: scale(1.5); /* Opera */
+	padding: 0px; /*10px 10px 9px 10px; */
+	margin: 0px 4px 0px 4px;
+	vertical-align:middle;
+}
+
+table { border-collapse: collapse; }
+table.tab td, table.tab td, th { border: 1px solid grey; padding: 2px; }
+table.align td { vertical-align: top; padding: 5px; }
+
+td, button { font-size: large; }
+td + td { text-align: center; }
