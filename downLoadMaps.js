@@ -65,14 +65,18 @@ function folderHtmlRx(e) {
 
 
 function downLoad() {
-	maps.forEach(function (map) {
-		var cb = document.getElementById(map);
+	var k, cb, map;
+	
+	for( k=0; k<mapList.length; k+=3) {
+		map = mapList[k].slice(1);
+		console.log( 'Now: ' + map );
+		cb = document.getElementById(map);
 		if( cb.checked ) {
 			cb.checked = false;
-			setCookie( 'downLoadMaps.' + map, (new Date()).toISOString() );
+			setCookie( 'downLoadMaps.' + map, (new Date( mapList[k+1] )).toISOString() );
 			window.open( map_root_page + map + map_ext ); // start download
 		}
-	});
+	}
 }
 
 function bodyLoaded() {
