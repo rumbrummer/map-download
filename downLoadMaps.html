@@ -1,53 +1,60 @@
-<!-- Download kurviger maps - 1st step  -->
+<!-- Download kurviger maps - 2nd step  -->
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>DownLoad</title>
-		<script src="downLoadMaps.js"></script>
 		<script src="cookie.js"></script>
+		<script src="downLoadMaps.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="https://kurviger.de/img/favicon/favicon-32x32.png">
 		<link rel="stylesheet" href="downLoadMaps.css"/>
+		<style id="styleRegion"></style>
 	</head>
 	<body onload="bodyLoaded();">
-		<h1> DownLoad kurviger maps</h1>
-		from <a href="https://offline-maps.kurviger.de" target="_blank" rel="noopener">https://offline-maps.kurviger.de</a>
-		<button onclick="downLoad()">Run...</button>
-		<button id="cookieLink" onclick="window.open('/mate/ShowCookies/ShowCookies.html?filter=^downLoadMaps');">cookies &#x1f36a;</button>
-		
-		<!-- <table class="align"> -->
-			<!-- <tbody> -->
-				<!-- <tr> -->
-					<!-- <td> -->
-						<!-- <table class="tab"> -->
-							<!-- <thead> -->
-								<!-- <tr> -->
-									<!-- <th>Root folder</th> -->
-									<!-- <th>Show ?</th> -->
-								<!-- </tr> -->
-							<!-- </thead>			 -->
-							<!-- <tbody id="tabRootFolders"> -->
-							<!-- </tbody> -->
-						<!-- </table> -->
-						<!-- </td> -->
-					<!-- <td> -->
+		<h1>download kurviger offline-maps</h1>
+		<table class="align">
+			<tbody>
+				<tr>
+					<td>
 						<table class="tab">
 							<thead>
 								<tr>
-									<th>Map</th>
-									<th>update(server)</th>
-									<th>Size</th>
-									<th>update(local)</th>
-									<th>Now ?</th>
+									<th>
+										Region
+										<button onclick="showRegions(false)" class="region">&#9650;</button>
+										<button onclick="showRegions(true)" id="showRegions" style="display: none;">&#9660;</button>
+									</th>
+									<th>Show ?</th>
 								</tr>
 							</thead>			
-							<tbody id="tabMaps">
+							<tbody id="tabRegionFolders">
 							</tbody>
 						</table>
-					<!-- </td> -->
-				<!-- </tr> -->
-			<!-- </tbody> -->
-		<!-- </table> -->
+					</td>
+					<td>
+						from <a href="https://offline-maps.kurviger.de" target="_blank" rel="noopener">https://offline-maps.kurviger.de</a>
+						<button onclick="downLoad()" class="main">Run...</button>
+						<button id="cookieLink" onclick="window.open('/mate/ShowCookies/ShowCookies.html?filter=^downLoadMaps');" class="main" style="display:none;">
+							cookies &#x1f36a;
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table class="tab">
+			<thead>
+				<tr>
+					<th>Map</th>
+					<th>update(server)</th>
+					<th>Size</th>
+					<th>update(local)</th>
+					<th>Now ?</th>
+				</tr>
+			</thead>			
+			<tbody id="tabMaps">
+			</tbody>
+		</table>
 	</body>
 </html>

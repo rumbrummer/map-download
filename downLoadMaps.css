@@ -1,6 +1,6 @@
-/* Download kurviger maps - 1st step */
+/* Download kurviger maps - 2nd step */
 
-button { min-height: 30px; min-width: 30px; margin: 15px; cursor: pointer;}
+button.main { min-height: 30px; min-width: 30px; margin: 5px 10px; cursor: pointer;}
 
 h1 { background-color: lightyellow; margin-bottom: 0px;}
 
@@ -15,9 +15,12 @@ input[type=checkbox] {
 	vertical-align:middle;
 }
 
-table { border-collapse: collapse; }
+table.tab { border-collapse: collapse; margin-top: 5px; border: 3px solid blue; }
 table.tab td, table.tab td, th { border: 1px solid grey; padding: 2px; }
 table.align td { vertical-align: top; padding: 5px; }
 
-td, button { font-size: large; }
+th { border-bottom: 2px solid blue; } 
+td:first-child { text-align: left; }
+td, button, td > * { font-size: large; vertical-align: middle; }
 td + td { text-align: center; }
+td > button, th > button { font-size: 0.6em; margin-left: 5px; }

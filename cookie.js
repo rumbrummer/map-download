@@ -1,4 +1,4 @@
-// Download kurviger maps - 1st step
+// Download kurviger maps - 2nd step
 
 var cookie_list = new GetCookieList(); // global list of cookies
 
@@ -85,4 +85,16 @@ function delCookie( name ) {
 
 function cookieExist(name) {
 	return ( getCookie(name).length > 0 );
+}
+
+function cookieSwi(name, lv_default) {
+	if ( cookieExist(name) ) {
+		return ( getCookie(name) == true || getCookie(name) == 'true'); // not 'true', because falsen when cookie = 1
+	} else {
+		if(  typeof lv_default != 'undefined' ) {
+			return lv_default; 
+		} else {
+			return false;
+		}
+	}
 }
